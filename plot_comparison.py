@@ -9,7 +9,6 @@ from matplotlib.widgets import Slider
 import sys
 
 """
-Python version: 3.8
 Created by: Frederik Werner
 Created on: 02.03.2023
 """

@@ -60,8 +60,17 @@ touch venv/COLCON_IGNORE
 
 Run Colcon to build the workspace:
 ```
-colcon build
+colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
+### 6. Source the install setup bash file
+```
+source install/setup.bash
+```
+Alternatively, add the following line to your .bashrc file to source it automatically on every terminal start
+```
+echo "source $(pwd)/install/setup.bash" >> ~/.bashrc
+```
+
 ## Run the simualtion
 1. Check/Modify the parameter files located in the ``./params`` folder.
 2. Run ``main_gggv_generation.py``. Output files are created in the ``output`` folder (folder is created if it does not exist).
