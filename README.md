@@ -7,14 +7,14 @@ road geometries, this concept can be extended to incorporate
 g-g constraints as a function of vehicle speed and vertical
 acceleration, commonly referred to as g-g-g-v diagrams. This repository provides a parallelized black box simulation toolchain to generate QSS g-g-g-v diagram. Our approach enables the use of existing high-fidelity vehicle models without the need for differentiability, avoiding model mismatch problems.
 
-<img src="./src/graphics/gggv_tornado.png" alt="Vehicle Sketch" width="500"/>
+<img src="./src/graphics/gggv_tornado.png" alt="Tornado" width="500"/>
 
 ## Basic Functionality
 The core functionality involves a fully factorial batch execution of steering ramp maneuvers across specified ranges of velocity (`v`), longitudinal acceleration (`ax`), and vertical acceleration (`gt`). 
 
 In the simulation, the vehicle maintains a quasi-steady-state at the target speed through external forces applied to its center of gravity, emulating inertial forces via the targeted longitudinal acceleration. A drive torque controller compensates for resistance forces to sustain the target speed.
 
-<img src="./src/graphics/vehicle_sketch.png" alt="Vehicle Sketch" width="400"/>
+<img src="./src/graphics/vehicle_sketch.png" alt="Vehicle Sketch" width="500"/>
 
 ## Simulation Process
 Each simulation starts with a small steering step. The resulting lateral acceleration jump calculates an appropriate steering ramp speed, achieving a controlled lateral acceleration rise rate essential for quasi-static driving conditions. The maximum lateral acceleration recorded in each simulation becomes the result.
@@ -22,7 +22,7 @@ Each simulation starts with a small steering step. The resulting lateral acceler
 - **Stable Runs:** The maximum recorded lateral acceleration is used as the result.
 - **Unstable Runs:** If instability is detected, the last known stable lateral acceleration is taken as the result.
 
-<img src="./src/graphics/Steering_Ramp.png" alt="Steering Ramp" width="500"/>
+<img src="./src/graphics/steering_ramp.png" alt="Steering Ramp" width="500"/>
 
 
 
