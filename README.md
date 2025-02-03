@@ -84,8 +84,6 @@ To look into a single simulation run you can switch the program from batch execu
 2. Specify the velocity `v`, longitudinal acceleration `ax`, and the vertical acceleration `gt`
 
 ## Vehicle Dynamics Model 
-
-## Vehicle Dynamics Model 
 The vehicle dynamics model included in this repository is a simple validation vehicle model, which can be solved analytically. The model is depicted in the figure below.
 
 <img src="./src/graphics/validation_model.png" alt="Validation Vehicle Model" width="400"/>
