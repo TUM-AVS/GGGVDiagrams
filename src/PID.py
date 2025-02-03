@@ -1,7 +1,6 @@
 import numpy as np
 
 """
-Python version: 3.8
 Created by: Frederik Werner
 Created on: 01.02.2021
 """
