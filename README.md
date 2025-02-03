@@ -90,13 +90,13 @@ The vehicle dynamics model included in this repository is a simple validation ve
 
 <img src="./src/graphics/validation_model.png" alt="Validation Vehicle Model" width="400"/>
 
-The validation vehicle model is a simple bicycle model with a fixed wheel base and center of gravity height. The vehicle is actuated by a steering angle and two wheel torques. The model is solved analytically using the equations of motion.
+The validation vehicle model point mass model with a kinemtaic steering relation. It is force saturated to form a circle, which is moved downwards by 2 mps2 to simulate drag forces.
 
+## Integrating Your Own Vehicle Model
 To use your own vehicle model with this toolchain, you need to provide a model that can be actuated by wheel torques and a steering angle. Furthermore, your model needs to allow external forces to be superimposed onto the center of gravity. The overall simulation process is depicted in the figure below.
 
 <img src="./src/graphics/block_diagram.png" alt="Simulation Process" width="600"/>
 
-## Integrating Your Own Vehicle Model
 1. In the `sim_handler` class in the file 'src/sim_handlin.py' class, you will need to instantiacte your vehicle model in the __init__ function of the sim_handler class
 2. Update the following member function of the sim_handler class to your naming conventions:
     - get_veh_params()
