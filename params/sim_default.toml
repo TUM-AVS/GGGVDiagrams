@@ -1,0 +1,34 @@
+# # This file configures the vehicle model
+
+# sim integration steptime
+t_s = 0.004
+
+# sim max runtime in s
+sim_stop_time = 300
+
+# target lat. acceleration rise rate for steering ramp in mps2/s
+ay_target_rate = 1.0
+
+# maximum steering angle to be simulated
+delta_max = 1.0
+delta_step_test = 0.001
+
+# max allowable yaw acceleration error for unstable detection and max value during backtracking
+ddpsi_err_detect = 0.1
+ddpsi_err_max = 0.02
+
+# filter for internal smoothing
+mean_s=0.15
+
+# wait times
+wait_PID_s=0.1
+wait_f_ext_s=0.5
+wait_step_time = 3.0
+
+# simulation debug log
+debug_log = true
+
+# velocity controller params (dt, max, min, kp, kd, ki)
+velPIDparams = [0.002, 10000.0, -15000.0, 1000.0, 0.0, 800.0 ]
+
+
